@@ -1,0 +1,52 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark " >
+   <li class="nav-logo">
+      <a class="logo-r" href="/"> </a>
+        </li>
+  <div class="container "> 
+   
+    <li class="nav-item active">
+      <a class="navbar-brand" href="/"> <i class="fas fa-home"></i>Inicio</a>
+        </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"><i class="fas fa-search"></i>Consultas <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i>Información</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <i class="fa fa-bars"></i>Mostrar más
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="/notes"><i class="fas fa-users"></i>Información de Paciente</a>
+              <a class="dropdown-item" href="/notes/add"><i class="fas fa-user-plus"></i>Añadir Paciente</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/logout"><i class="fas fa-sign-out-alt"></i>Cerrar sesion</a>
+            </div>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/users/signin"><i class="fas fa-sign-in-alt"></i>Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup"><i class="fas fa-poll-h"></i>Registrarse</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
